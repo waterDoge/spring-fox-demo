@@ -1,0 +1,8 @@
+spring:
+  flyway:
+    schemas: spring-fox
+    table: _schema_history
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring-fox?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456

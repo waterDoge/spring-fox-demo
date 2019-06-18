@@ -1,0 +1,112 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "营销短信"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "user-controller",
+      "description": "User Controller"
+    }
+  ],
+  "paths": {
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "get Users",
+        "operationId": "getUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "get Users",
+        "operationId": "delUsingDELETE",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "createdTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "salt": {
+          "type": "string"
+        },
+        "updatedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "User"
+    }
+  }
+}
